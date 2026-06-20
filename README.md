@@ -1,4 +1,4 @@
-# Nocturne  — A Nocturne for Tonight's Phase
+# Nocturne  — A Painting for Tonight's Phase
 
 *Nocturne * is a minimal web app that displays a curated, public-domain nocturne painting matching the actual current phase of the moon.
 
