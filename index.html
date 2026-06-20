@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Moon — A nocturne for tonight's phase</title>
+  <meta name="description" content="One real public-domain nocturne painting, chosen to match the actual current moon phase, wherever you are. No account. No ads. Just the moon and a painting." />
+  <meta name="theme-color" content="#06080e" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Current Moon" />
+  <meta property="og:description" content="A nocturne painting for tonight's moon phase." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── Loading screen ──────────────────────────────────────────────── -->
+  <div id="loading-screen" role="status" aria-live="polite">
+    <div id="loading-text">Reading the sky…</div>
+  </div>
+
+  <!-- ─── Painting background ─────────────────────────────────────────── -->
+  <div id="painting-bg" role="img" aria-label="Nocturne painting background"></div>
+
+  <!-- ─── Top bar ─────────────────────────────────────────────────────── -->
+  <header id="topbar" role="banner">
+    <span id="site-title">Current Moon</span>
+    <div id="topbar-actions">
+      <div id="topbar-info" class="topbar-info-container">
+        <span id="topbar-time">—</span>
+        <span id="topbar-date-time">
+          <span id="topbar-day">—</span>
+          <span id="topbar-divider">·</span>
+          <span id="topbar-date">—</span>
+        </span>
+      </div>
+      <button id="refresh-btn" class="topbar-btn" aria-label="Show another nocturne">
+        Another painting
+      </button>
+      <button id="gallery-btn" class="topbar-btn" aria-label="View all nocturnes in the curated set">
+        All nocturnes
+      </button>
+    </div>
+  </header>
+
+  <!-- ─── Sidebar toggle (mobile) ─────────────────────────────────────── -->
+  <button id="sidebar-toggle" aria-label="Toggle Lunar Almanac" aria-expanded="false">≡</button>
+
+  <!-- ─── Lunar Almanac Sidebar ───────────────────────────────────────── -->
+  <aside id="sidebar" aria-label="Lunar Almanac">
+    <button id="sidebar-close" aria-label="Close Almanac">×</button>
+
+    <!-- Almanac Header -->
+    <div class="almanac-header">
+      <div class="sidebar-section-label">Lunar Almanac</div>
+      <h2 id="almanac-phase-title">—</h2>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Science Section -->
+    <div class="almanac-section">
+      <div class="sidebar-section-label">Astronomy</div>
+      <div class="almanac-grid">
+        <div class="almanac-stat-card">
+          <span class="stat-label">Illumination</span>
+          <span id="almanac-illumination" class="stat-value">—</span>
+        </div>
+        <div class="almanac-stat-card">
+          <span class="stat-label">Moon Age</span>
+          <span id="almanac-age" class="stat-value">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Folklore Section -->
+    <div class="almanac-section">
+      <div class="sidebar-section-label">Folklore & Mythology</div>
+      <div class="folklore-card">
+        <h3 id="folklore-theme">—</h3>
+        <p id="folklore-lore">—</p>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Transition Section -->
+    <div class="almanac-section">
+      <div class="sidebar-section-label">Next Painting</div>
+      <div id="almanac-transition" class="almanac-transition-card">
+        <span class="transition-icon">✦</span>
+        <div class="transition-details">
+          <span id="transition-countdown">—</span>
+          <span class="transition-sub">next phase transition</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── Bottom caption ───────────────────────────────────────────────── -->
+  <footer id="caption" role="contentinfo">
+
+    <!-- Phase indicator row -->
+    <div id="phase-indicator" aria-live="polite">
+      <span id="phase-text">Waxing Gibbous</span>
+      <span id="illumination-pct" aria-label="Moon illumination percentage">—% lit</span>
+    </div>
+
+    <!-- Phase description -->
+    <p id="phase-line" aria-live="polite"></p>
+
+    <!-- Painting title (clickable) -->
+    <div id="painting-title-wrap">
+      <button
+        id="painting-title"
+        aria-label="Tap to see why this painting was chosen"
+        aria-haspopup="dialog"
+      ></button>
+      <div id="painting-meta" aria-live="polite"></div>
+      <div id="painting-hint" aria-hidden="true">
+        <span>↑</span> <span>Tap the title to see why it was chosen</span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ─── Plaque overlay ───────────────────────────────────────────────── -->
+  <div
+    id="plaque-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="plaque-painting-title"
+    aria-describedby="plaque-why-text"
+  >
+    <article id="plaque">
+      <button id="plaque-close" aria-label="Close">×</button>
+
+      <div class="plaque-label">Curated selection</div>
+      <div id="plaque-artist"></div>
+
+      <h1 id="plaque-painting-title"></h1>
+      <div id="plaque-year"></div>
+
+      <div class="plaque-divider"></div>
+
+      <div class="plaque-row">
+        <span class="plaque-row-label">Medium</span>
+        <span class="plaque-row-value" id="plaque-medium"></span>
+      </div>
+      <div class="plaque-row">
+        <span class="plaque-row-label">Museum</span>
+        <span class="plaque-row-value" id="plaque-museum"></span>
+      </div>
+      <div class="plaque-row">
+        <span class="plaque-row-label">Access</span>
+        <span class="plaque-row-value" id="plaque-license"></span>
+      </div>
+      <div class="plaque-row">
+        <span class="plaque-row-label">Phase</span>
+        <span class="plaque-row-value" id="plaque-phase"></span>
+      </div>
+
+      <div class="plaque-divider"></div>
+
+      <div id="plaque-why-section">
+        <div class="plaque-label">Why this painting</div>
+        <p id="plaque-why-text"></p>
+      </div>
+
+      <div id="plaque-tags" aria-label="Tags"></div>
+
+      <div id="plaque-links" aria-label="External links"></div>
+    </article>
+  </div>
+
+  <!-- ─── Gallery overlay ──────────────────────────────────────────────── -->
+  <div
+    id="gallery-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="gallery-heading"
+  >
+    <div id="gallery-inner">
+      <div id="gallery-header">
+        <div>
+          <div class="gallery-eyebrow">Gallery</div>
+          <h2 id="gallery-heading"><em>Current Moon</em> — every nocturne in the curated set</h2>
+          <p id="gallery-sub">
+            <span id="gallery-count">30 total</span> · tap a painting to see its details
+          </p>
+        </div>
+        <button id="gallery-close" aria-label="Close gallery">×</button>
+      </div>
+
+      <div id="gallery-grid" role="list" aria-label="Painting gallery"></div>
+    </div>
+  </div>
+
+  <!-- ─── Scripts ─────────────────────────────────────────────────────── -->
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
