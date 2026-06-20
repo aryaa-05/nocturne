@@ -1,4 +1,4 @@
-// app.js — Current Moon main application logic
+// app.js — Nocturne main application logic
 import { getMoonPhase, getDaySeed, PHASE_INFO, LUNAR_FOLKLORE, SYNODIC_MONTH_MS } from './moon.js';
 import { PAINTINGS, selectPainting } from './paintings.js';
 
