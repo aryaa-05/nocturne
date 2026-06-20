@@ -1,6 +1,6 @@
-# Current Moon — A Nocturne for Tonight's Phase
+# Nocturne  — A Nocturne for Tonight's Phase
 
-*Current Moon* is a minimal web app that displays a curated, public-domain nocturne painting matching the actual current phase of the moon.
+*Nocturne * is a minimal web app that displays a curated, public-domain nocturne painting matching the actual current phase of the moon.
 
 Designed as an aesthetic desktop dashboard or screensaver, the app calculates the moon's phase in real-time, displays local system date and time, and opens a window into history through scientific data, historical folklore, and fine art.
 
@@ -46,7 +46,7 @@ Provides historical and mythic contexts for each of the 8 moon phases:
 
 ## How it Works: Astronomical Calculations
 
-*Current Moon* requires **no internet connection** or API keys to function. All astronomical computations occur client-side:
+*Nocturne * requires **no internet connection** or API keys to function. All astronomical computations occur client-side:
 - **Phase Fraction**: Calculated by taking the elapsed milliseconds since a known new moon epoch (January 6, 2000 18:14 UTC) and wrapping it by the mean synodic month length of `29.530588853 days`.
 - **Illumination Percentage**: Derived mathematically via `(1 - cos(phase * 2π)) / 2 * 100`.
 - **Phase Transition Countdown**: The app maps the current phase fraction against the phase boundaries in `PHASE_INFO`. It computes the remaining fraction until the next boundary is crossed and multiplies it by the synodic month duration, converting the result dynamically into days, hours, and minutes.
