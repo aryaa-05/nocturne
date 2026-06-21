@@ -282,13 +282,15 @@ function openPlaque(painting) {
     a.innerHTML = `View at museum <span style="opacity:0.5">↗</span>`;
     els.plaqueLinks.appendChild(a);
   }
-  const srcA = document.createElement('a');
-  srcA.className = 'plaque-link-btn';
-  srcA.href = painting.sourceUrl;
-  srcA.target = '_blank';
-  srcA.rel = 'noopener noreferrer';
-  srcA.innerHTML = `Wikimedia source <span style="opacity:0.5">↗</span>`;
-  els.plaqueLinks.appendChild(srcA);
+  if (painting.sourceUrl && (painting.sourceUrl.includes('wikimedia.org') || painting.sourceUrl.includes('wikipedia.org'))) {
+    const srcA = document.createElement('a');
+    srcA.className = 'plaque-link-btn';
+    srcA.href = painting.sourceUrl;
+    srcA.target = '_blank';
+    srcA.rel = 'noopener noreferrer';
+    srcA.innerHTML = `Wikimedia source <span style="opacity:0.5">↗</span>`;
+    els.plaqueLinks.appendChild(srcA);
+  }
 
   els.plaqueOverlay.classList.add('visible');
   state.plaqueOpen = true;
