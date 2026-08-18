@@ -610,6 +610,23 @@ a:hover { color: var(--accent); text-decoration: underline; }
   font-family: var(--font-serif);
 }
 
+/* Fact section */
+#plaque-fact-section {
+  margin-top: 14px;
+}
+#plaque-fact-section .plaque-label {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#plaque-fact-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-family: var(--font-serif);
+  border-left: 2px solid var(--border);
+  padding-left: 12px;
+}
+
 /* Tags */
 #plaque-tags {
   display: flex;

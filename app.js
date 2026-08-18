@@ -54,6 +54,7 @@ const els = {
   plaqueLicense:   $('plaque-license'),
   plaquePhase:     $('plaque-phase'),
   plaqueWhyText:   $('plaque-why-text'),
+  plaqueFact:      $('plaque-fact-text'),
   plaqueTags:      $('plaque-tags'),
   plaqueLinks:     $('plaque-links'),
 
@@ -251,6 +252,9 @@ function openPlaque(painting) {
 
   // Why text
   els.plaqueWhyText.textContent = painting.description;
+
+  // Fact
+  els.plaqueFact.textContent = painting.fact;
 
   // Tags
   els.plaqueTags.innerHTML = '';

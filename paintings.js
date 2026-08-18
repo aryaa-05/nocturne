@@ -20,7 +20,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["stormy", "cold_blue"],
     palette: "dark",
-    description: "Whistler reduces fireworks over the Cremorne pleasure gardens to dissolving bursts of gold in pitch dark — sensation and atmosphere over literal depiction, the moon's absence amplifying the artificial light."
+    description: "This work is a depiction of a fireworks display in London's Cremorne Gardens",
+    fact: "It was the central issue of a libel suit that involved the art critic John Ruskin and the artist. Ruskin had publicly slandered the work by making the statement, \"I have seen, and heard, much of cockney impudence before now; but never expected to hear a coxcomb ask two hundred guineas for flinging a pot of paint in the public's face.\"",
   },
   {
     id: "whistler-blue-silver-cremorne",
@@ -36,7 +37,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["still", "cold_blue"],
     palette: "cold_blue",
-    description: "The Thames dissolved into horizontal bands of silver and blue — Whistler's most reductive nocturne, a meditation on stillness, water, and diffused moonlight with no fixed center."
+    description: "Painted in 1872 by James McNeill Whistler, Nocturne: Blue and Silver — Cremorne Lights is an oil-on-canvas landscape depicting the River Thames at night looking toward Battersea. Housed in the Tate Collection in London, it transforms a polluted industrial riverbank into a tranquil, abstract harmony of tone and light.",
+    fact: "X-ray imaging revealed that Whistler originally painted decorative human figures (part of his \"Six Projects\" series) underneath this canvas before painting over them to focus entirely on the nocturnal landscape.",
   },
   {
     id: "whistler-grey-gold-westminster",
@@ -52,7 +54,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["still", "warm_gold"],
     palette: "warm_gold",
-    description: "Westminster Bridge dissolves into warm fog and gold gaslight reflections. Whistler elevates a quotidian London night into a tonal poem — every lamp a small moon on water."
+    description: "It captures a warm summer night on the River Thames looking toward the London Parliament towers",
+    fact: "Whistler named his night scenes \"Nocturnes\" after musical pieces to show that colors and tones mattered more than the actual story or subject.",
   },
 
   // ─── Van Gogh ────────────────────────────────────────────────────────────
@@ -70,7 +73,8 @@ const PAINTINGS = [
     phase: ["full", "waning_gibbous"],
     mood: ["still", "cold_blue"],
     palette: "cold_blue",
-    description: "Painted on a moonlit September night at the bank of the Rhône, the stars are so large and brilliant they seem to vibrate — van Gogh described the painting as 'the starry sky above, the blue and violet water, and the green city lit by gas.'"
+    description: "This is a moderately abstract landscape painting (1889) of an expressive night sky over a small hillside village",
+    fact: "Unlike his more famous The Starry Night (painted from an asylum window from memory), this piece was painted en plein air (outdoors) on location at night. Astronomers confirmed that the cluster of stars shining over the water accurately maps out the Plough or Ursa Major (Great Bear) constellation as it appeared in Arles that autumn",
   },
   {
     id: "gogh-white-house-night",
@@ -86,7 +90,8 @@ const PAINTINGS = [
     phase: ["full", "waxing_gibbous"],
     mood: ["still", "warm_gold"],
     palette: "warm_gold",
-    description: "One of van Gogh's last nocturnes, painted in Auvers-sur-Oise weeks before his death. The white house glows under a thick cobalt sky pricked with stars — warm light pouring from windows against an indigo night."
+    description: "It depicts a lone white cottage glowing under an evening sky featuring a brilliant star (identified by astronomers as Venus) and a lone walking figure, and it hangs in the Hermitage Museum in St. Petersburg",
+    fact: "This piece is officially the final night-sky and star-themed painting Vincent van Gogh ever created.",
   },
   {
     id: "gogh-cafe-terrace",
@@ -102,7 +107,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["still", "warm_gold"],
     palette: "warm_gold",
-    description: "A gaslit café spills gold onto cobblestones; above, a deep blue sky blazes with stars. No moon visible — this is the city's own nocturne, human warmth against astronomical cold."
+    description: "The oil painting portrays a warm, inviting café terrace glowing beneath a massive yellow gas lantern.",
+    fact: "Despite being an evening scene, Van Gogh did not use a single drop of black paint, relying instead on rich blues, violet-pinks, and warm yellows.",
   },
 
   // ─── Caspar David Friedrich ───────────────────────────────────────────────
@@ -121,7 +127,8 @@ const PAINTINGS = [
     phase: ["waning_crescent"],
     mood: ["rural", "cold_blue"],
     palette: "cold_blue",
-    description: "A waning crescent moon hangs low over gnarled oaks — the phase clearly legible and confirmed by Friedrich scholarship as intentionally depicted. Two figures gaze upward in silent contemplation, dwarfed by the night."
+    description: "Two foreground figures stand on a rugged, uphill dirt path framed by an evergreen spruce and an uprooted, gnarled dead oak tree",
+    fact: ": Friedrich painted at least three variations of this composition: an 1819–20 version (Galerie Neue Meister, Dresden), a variant featuring a man and woman around 1824 (Alte Nationalgalerie, Berlin), and an 1830 version housed in The Metropolitan Museum of Art. Friedrich joked that if souls migrated to another world after death, he would surely end up \"on the moon\" because he painted it so often",
   },
   {
     id: "friedrich-moonrise-sea",
@@ -137,7 +144,8 @@ const PAINTINGS = [
     phase: ["waxing_gibbous"],
     mood: ["still", "silver"],
     palette: "silver",
-    description: "Three figures on a rocky shore watch the gibbous moon rise from the horizon, casting a silver path across dark water. Friedrich makes the moment liturgical — a rising moon as revelation."
+    description: "It shows three silhouetted figures on a boulder watching a golden moon rise over a dark Baltic sea as two ghost-like sailing ships approach the shore",
+    fact: "The Lonely Tree, commissioned by banker Joachim Heinrich Wilhelm Wagener to represent evening and morning.",
   },
   {
     id: "friedrich-man-woman-moon",
@@ -149,10 +157,12 @@ const PAINTINGS = [
     museumUrl: "https://www.smb.museum/en/museums-institutions/alte-nationalgalerie/home/",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Caspar_David_Friedrich_-_Man_and_Woman_Contemplating_the_Moon_-_WGA08271.jpg?_=20110724062504",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Friedrich_-_Two_Men_Contemplating_the_Moon.jpg",
+    license: "Public Domain",
     phase: ["waning_crescent"],
     mood: ["rural", "cold_blue"],
     palette: "cold_blue",
-    description: "A companion to his 1819 work, now with a couple among the same oaks and crescent moon. Friedrich returns to this image obsessively — the waning crescent as emblem of longing, of things beautiful and passing."
+    description: "Two foreground figures stand on a rugged, uphill dirt path framed by an evergreen spruce and an uprooted, gnarled dead oak tree",
+    fact: "Friedrich painted at least three variations of this composition: an 1819–20 version (Galerie Neue Meister, Dresden), a variant featuring a man and woman around 1824 (Alte Nationalgalerie, Berlin), and an 1830 version housed in The Metropolitan Museum of Art. Friedrich joked that if souls migrated to another world after death, he would surely end up \"on the moon\" because he painted it so often",
   },
 
   // ─── Edvard Munch ────────────────────────────────────────────────────────
@@ -170,7 +180,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["cold_blue", "still"],
     palette: "cold_blue",
-    description: "Unlike van Gogh's ecstatic version, Munch's starry night is haunted — a single figure on a shoreline, the reflections jagged and column-like, the sky alive with a different kind of unease. The moon is implied, not shown."
+    description: "Edvard Munch's Starry Night depicts the Norwegian coastal town of Åsgårdstrand under a moody, indigo sky.",
+    fact: " A faint, ghostly shape on the fence represents a silhouette of two lovers, a recurring symbol of longing and anxiety in Munch's art",
   },
 
   // ─── John Atkinson Grimshaw ───────────────────────────────────────────────
@@ -188,7 +199,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["rural", "silver"],
     palette: "silver",
-    description: "Grimshaw's allegorical moonlight masterpiece — a luminous figure drifts above a silver-flooded forest path, the full moon implied in her radiance. His most explicitly lunar work, the light sourceless and total."
+    description: " It depicts an ethereal, translucent-winged fairy draped in a sheer veil, gliding over a moonlit seaside village.",
+    fact: "The canvas was originally exhibited with a direct poetic tribute to Percy Bysshe Shelley's verses (\"Wrap thy form in mantle grey / Star in wrought!\")",
   },
   {
     id: "grimshaw-autumnal-evening",
@@ -204,7 +216,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "Wet leaves on a lane, the moon behind thin cloud, gaslight amber in the distance. No painter understood the poetry of autumn moonlight on English lanes better than Grimshaw — the glow is everywhere and nowhere."
+    description: "Autumn Evening, by John Atkinson Grimshaw is an oil-on-canvas painting depicting a quiet, leaf-strewn suburban lane in Leeds, England",
+    fact: "Grimshaw was entirely self-taught and used a camera obscura and lenses to project scenes onto his canvas, allowing for his trademark photographic realism",
   },
   {
     id: "grimshaw-liverpool-quay",
@@ -220,7 +233,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["warm_gold", "industrial"],
     palette: "warm_gold",
-    description: "Westminster Bridge reflected in gold and copper on the Thames — Grimshaw's industrial nocturnes show the city at its most enchanted, every streetlamp a small moon on the water."
+    description: "The masterpiece depicts a moonlit London night featuring the River Thames, the Houses of Parliament, and the iconic clock towe",
+    fact: " Renowned artist James Abbott McNeill Whistler famously remarked upon seeing Grimshaw's work: \"I considered myself the inventor of nocturnes until I saw Grimmy's moonlight pictures",
   },
   {
     id: "grimshaw-november-morning",
@@ -236,7 +250,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["rural", "silver"],
     palette: "silver",
-    description: "A quiet lane dappled in silver — Grimshaw's moonlit lanes feel as if you could walk into them and hear nothing but your own footsteps on wet stone. Whistler said he thought he invented nocturnes until he saw these."
+    description: "It is an oil-on-board painting depicting a quiet, deserted rural or suburban lane bathed in the soft, ethereal, and misty glow of a full moon filtering through a delicate cloudscape",
+    fact: "Grimshaw was entirely self-taught and used a camera obscura and lenses to project scenes onto his canvas, allowing for his trademark photographic realism",
   },
 
   // ─── Ralph Albert Blakelock ───────────────────────────────────────────────
@@ -254,7 +269,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "A full moon behind silhouetted trees casts amber light over the encampment fires — Blakelock's moon is always warm, always filtered through dense foliage into pools of gold. A meditation on what light the full moon shares with fire."
+    description: "Housed in the Smithsonian American Art Museum, it depicts a glowing, eerie moon filtering through dark, silhouetted trees over a quiet Native American camp",
+    fact: "Blakelock was an accomplished pianist and would often alternate between playing the piano and painting, using musical improvisation to inspire his hazy nocturnes.",
   },
   {
     id: "blakelock-moonlight",
@@ -270,7 +286,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "Blakelock's signature composition: the moon as an ember filtered through a screen of dark trees, the landscape glowing from within. He spent the last decades of his life in an asylum; these moonlit forests were his world."
+    description: "\"Moonlight\" is a signature Tonalist oil painting featuring dark, silhouetted trees against a glowing, luminous moon.",
+    fact: "While he was locked away in an asylum, his painting Brook by Moonlight sold for $20,000 in 1916—setting an all-time auction record for a living American artist",
   },
 
   // ─── Albert Pinkham Ryder ────────────────────────────────────────────────
@@ -288,7 +305,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "Ryder's cove is primordial — thick impasto, sky and water barely distinguished, a single boat at rest under a cloud-ringed moon. His surfaces are geological, built up over decades; the moon a smear of silver on dark glass."
+    description: "A quiet, nocturnal coastal scene featuring a dark cliff, a calm body of water, and a small moored boat.",
+    fact: "Ryder heavily experimented with unconventional and unstable materials—including applying excessive amounts of oil to the backs of his canvases. Because of this eccentric method, Moonlit Cove has significantly darkened and developed extensive surface cracking (crazing) over time.",
   },
   {
     id: "ryder-toilers-sea",
@@ -304,7 +322,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "A full moon spills silver across the sea; a lone fisherman's boat is silhouetted against the radiance. Ryder understood the sea's indifference — the moon does not care for the toilers below, only illuminates."
+    description: " A solitary sailboat crests a dark, turbulent wave at night. A bright full moon pierces the heavy atmosphere, casting a strong, pale reflection on the churning sea",
+    fact: "The title links the work to Victor Hugo's 1866 novel of the same name. However, Ryder shows no human figures, focusing instead on an emotional and symbolic struggle",
   },
 
   // ─── Ivan Aivazovsky ────────────────────────────────────────────────────
@@ -322,7 +341,8 @@ const PAINTINGS = [
     phase: ["full", "waning_gibbous"],
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "Aivazovsky painted the sea's surface as pure luminosity — a full moon's silver path trembles across the Black Sea. He could render water and light better than anyone; here the moon is sovereign, the waves its tributaries."
+    description: "The Black Sea At Night shows a tiny ship drifting on dark, restless waters under a moonlit sky. Clouds break to let moonlight spill across the huge, deep sea, making the water look like a dark and shining mirror",
+    fact: "Sailors who saw his art said they could actually \"hear the waves\" moving in his paintings because he painted water so well",
   },
   {
     id: "aivazovsky-night-crimea",
@@ -338,7 +358,8 @@ const PAINTINGS = [
     phase: ["waxing_gibbous"],
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "The gibbous moon rises over the Crimean coast, its reflection a golden column broken by the surf. This early Aivazovsky already shows his mastery of nocturnal marine light — the moon emerging from its own painting."
+    description: "\"Moonlit Night in Crimea\" (1859) by Ivan Aivazovsky is a stunning oil painting capturing the peaceful glow of a bright moon reflecting over the dark, gentle waves of the Black Sea,",
+    fact: "Aivazovsky rarely sketched outdoors. He painted his glowing water effects and crashing waves entirely from his powerful visual memory. [1]If you woul",
   },
 
   // ─── Henry Pether ───────────────────────────────────────────────────────
@@ -356,7 +377,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["warm_gold", "industrial"],
     palette: "warm_gold",
-    description: "A full moon hangs over Westminster Bridge, its reflection broken into a thousand shards of gold on the Thames. Pether specialized in exactly these views — London at night, the city softened by water and the moon."
+    description: "The piece is an exquisite Victorian nocturne that captures a rapidly modernising London landscape bathed in a dramatic luminous glow",
+    fact: "Henry wasn't just a master of painting artificial light; he was actively fascinated by physical light and construction in the real world. Alongside his art career, he was a registered inventor of specialized lamps, architectural tiling, and engineering materials.",
   },
 
   // ─── Hokusai / Hiroshige ─────────────────────────────────────────────────
@@ -374,7 +396,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "Hiroshige's full moon at Takanawa glows above Edo Bay, the water flat and receiving. The woodblock's limited palette achieves something photographs cannot — distillation. The moon as pure idea."
+    description: "This is a classic color woodblock print by Utagawa Hiroshige from his pioneering series Famous Views of the Eastern Capital (Tōto Meisho). It depicts a calm dusk over Edo Bay with a glowing harvest moon and a diagonal sweep of migrating wild geese",
+    fact: "Hiroshige dedicates a massive portion of the frame to empty sky and water. This mastery of yohaku (the Japanese aesthetic of intentional negative space) elevates the atmosphere",
   },
   {
     id: "hiroshige-moonlight-nagakubo",
@@ -390,7 +413,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["rural", "cold_blue"],
     palette: "cold_blue",
-    description: "Travelers on the Kisokaido road by moonlight — the mountains in deepened indigo, the path lit by a moon that casts no shadows in the print, only atmosphere. Travel in moonlight as an ancient and dignified activity."
+    description: "It shows travelers silhouetted by moonlight, a traveler crossing a bridge with a walking stick, and children playing with dogs near a man leading a pack horse.",
+    fact: "Hiroshige dedicates a massive portion of the frame to empty sky and water. This mastery of yohaku (the Japanese aesthetic of intentional negative space) elevates the atmosphere",
   },
   {
     id: "hokusai-autumn-moon",
@@ -406,7 +430,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["silver", "rural"],
     palette: "silver",
-    description: "Hokusai places the autumn full moon over Lake Biwa — the moon reflected in the water below the temple, doubling the night. In Japanese aesthetics, moon-viewing (tsukimi) is autumn's defining ritual."
+    description: "Nagakubo: Moonlight on the Road (Station 27) is a famous woodblock print by Utagawa Hiroshige from his late 1830s series The Sixty-Nine Stations of the Kiso Kaidō.",
+    fact: "The print depicts Nagakubo-shuku, an actual mountain post station along the ancient Nakasendō highway in Japan.",
   },
 
   // ─── George Inness ──────────────────────────────────────────────────────
@@ -424,7 +449,8 @@ const PAINTINGS = [
     phase: ["waxing_crescent", "first_quarter"],
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "Inness paints the moon just cresting the horizon at golden hour — twilight and moonrise overlapping. A Barbizon-influenced American pastoral: the moon arriving as the sun departs, the fields holding both lights at once."
+    description: "It is a quiet twilight landscape showing a pale moon rising over the dark marshes and islands of Alexandria Bay, New York. The oil painting focuses on mood and soft light rather than sharp details",
+    fact: "Inness did not care if art looked like a camera photo. He believed a painting should only wake up a deep feeling.",
   },
 
   // ─── Winslow Homer ──────────────────────────────────────────────────────
@@ -442,7 +468,8 @@ const PAINTINGS = [
     phase: ["full"],
     mood: ["silver", "marine"],
     palette: "silver",
-    description: "Full moon over the Maine coast — Homer strips the scene to its essentials: dark rocks, a lighthouse, silver surf, the moon's path on the sea. American grandeur rendered with total restraint."
+    description: "The work shows dark, swelling ocean waves crashing against a rocky coast under a moonlit night sky",
+    fact: "Homer never went through formal long-term art academies to learn painting.He trained briefly as a printmaker's apprentice and took a few lessons, but called himself self-taught",
   },
 
   // ─── Joseph Wright of Derby ──────────────────────────────────────────────
@@ -460,7 +487,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "Wright of Derby captures the drama of natural light — moonlight and storm-light competing. His nocturnes come from the same industrial curiosity as his candlelit interiors: what does light do to the world?"
+    description: "It depicts a serene rural view—framed by dark trees and a rustic bridge—illuminated by a brilliant, colorful rainbow slicing through clearing storm clouds",
+    fact: "The painting features a noticeably paler sky enclosed directly within the arc of the rainbow (known as Babinet's reflex/optical phenomenon)—a scientific and meteorological detail of light refraction that scientists did not formally recognize or explain until the following century",
   },
 
   // ─── Frederic Edwin Church ───────────────────────────────────────────────
@@ -478,7 +506,8 @@ const PAINTINGS = [
     phase: ["waning_crescent"],
     mood: ["serene", "twilight", "rural"],
     palette: "cool_twilight_with_warm_gold",
-    description: "A late Church masterpiece painted in 1889. The waning crescent moon (the 'old moon') appears low and luminous over a Greek landscape. This composition reflects Church's intense astronomical study, where light is treated as a form of spiritual revelation."
+    description: "Housed in the Santa Barbara Museum of Art, this landscape portrays ancient classical ruins silhouetted against a dusky twilight as a cool, luminous full moon ascends over a quiet body of water",
+    fact: " Church traveled to Greece and toured Athens in 1869, making extensive on-site sketches and oil studies of classical architecture that he drew upon decades late",
   },
 
   // ─── Jean-François Millet ────────────────────────────────────────────────
@@ -496,7 +525,8 @@ const PAINTINGS = [
     phase: null,
     mood: ["rural", "cold_blue"],
     palette: "cold_blue",
-    description: "Millet's peasant landscapes rarely turned to night, but here a shepherd moves his flock under a vast star-filled sky. The moon is absent — only starlight and the profound, indifferent sky of the plain."
+    description: "Its a painting showing a dark rural path, a silhouetted cart on the horizon, and a scientifically accurate night sky filled with shooting stars",
+    fact: " Unlike many artists who paint random dots for stars, Millet painted real constellations like Orion's Belt and Canis Major with exact placement",
   },
   // ─── Charles-François Daubigny ───────────────────────────────────────────
   {
@@ -513,7 +543,8 @@ const PAINTINGS = [
     phase: ["waxing_gibbous", "full"],
     mood: ["warm_gold", "rural"],
     palette: "warm_gold",
-    description: "Daubigny painted the Oise valley from his studio boat — this moonrise at Auvers predates van Gogh's time there by a decade. The Barbizon painters taught the Impressionists how to see night; this is their nocturne."
+    description: " It captures twilight falling over the French countryside with a luminous full moon rising in the darkening sky.",
+    fact: " This atmospheric canvas is widely considered the final major painting completed by Daubigny before his death in February 1878",
   },
 ];
 
